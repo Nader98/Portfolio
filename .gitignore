@@ -1,3 +1,4 @@
 .pfenv
 *.pyc
 .env
+*.sqlite
