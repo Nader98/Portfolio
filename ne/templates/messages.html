@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block header %}
-	{% block title %}Homepage{% endblock title %}
+	<h2>{% block title %}Messages{% endblock title %}</h2>
 {% endblock header %}
 
 {% block content %}
-	<p>This is homepage of my portfolio</p>
+	Dear {{ user }}, your message sent, thanks.
 {% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h2>{% block title %}Contact me{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+	<p>You can find me at there:</p>
+	<div class="message-block">
+		<p>also you be able send message to me from here</p>
+		<div class="message-control">
+			<form method="post">
+				<div class="form-control">
+					<label for="author">Your Name:</label>
+					<input name="author" type="text" placeholder="Your Name" id="author" value="{{ request.form['author'] }}">
+				</div>
+				<div class="form-control">
+					<label for="message">Your Message:</label>
+					<textarea name="message" placeholder="Write everthing you like..." id="message" value="{{ request.form['message'] }}"></textarea>
+				</div>
+				<div class="form-control">
+					<input type="submit" value="Send" id="submit-btn">
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock content %}
