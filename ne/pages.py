@@ -10,6 +10,6 @@ def home():
 def projects():
     return render_template("projects.html")
 
-@bp.route("/skills")
-def skills():
-    return render_template("skills.html")
+@bp.route("/about")
+def about():
+    return render_template("about.html")

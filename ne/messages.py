@@ -20,7 +20,7 @@ def contact():
             db.commit()
             return redirect(url_for("messages.message", f=author))
 
-    return render_template("messages/contact-me.html")
+    return render_template("contact-me.html")
 
 @bp.route("/messages/<f>")
 def message(f):
@@ -28,4 +28,4 @@ def message(f):
     # messages = db.execute(
     #     "SELECT creator, text, created FROM message ORDER BY created DESC"
     # ).fetchall()
-    return render_template("messages/messages.html", user=f)
+    return render_template("messages.html", user=f)

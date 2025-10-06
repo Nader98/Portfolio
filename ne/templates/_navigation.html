@@ -1,7 +1,12 @@
 <nav>
-	<ul>
-		<li><a href="{{ url_for('pages.home') }}">Home</a></li>
-		<li><a href="{{ url_for('pages.skills') }}">Skills</a></li>
-		<li><a href="{{ url_for('pages.projects')}}">Projects</a></li>
-		<li><a href="{{ url_for('messages.contact') }}">Contact Me</a></li>
+	<div class="nav-content">
+		<div class="nader-name">
+			<a href="{{ url_for('pages.home') }}">Nader Ebrahimi</a>
+		</div>
+		<ul class="links">
+			<li><a href="{{ url_for('pages.about') }}">About Me</a></li>
+			<li><a href="{{ url_for('pages.projects')}}">Projects</a></li>
+			<li><a href="{{ url_for('messages.contact') }}">Contact Me</a></li>
+		</ul>
+	</div>
 </nav>

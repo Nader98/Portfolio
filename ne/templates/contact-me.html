@@ -1,27 +1,40 @@
 {% extends 'base.html' %}
 
-{% block header %}
-	<h2>{% block title %}Contact me{% endblock title %}</h2>
-{% endblock header %}
+{% block title %}Contact me{% endblock title %}
 
 {% block content %}
-	<p>You can find me at there:</p>
-	<div class="message-block">
-		<p>also you be able send message to me from here</p>
-		<div class="message-control">
-			<form method="post">
-				<div class="form-control">
-					<label for="author">Your Name:</label>
-					<input name="author" type="text" placeholder="Your Name" id="author" value="{{ request.form['author'] }}">
-				</div>
-				<div class="form-control">
-					<label for="message">Your Message:</label>
-					<textarea name="message" placeholder="Write everthing you like..." id="message" value="{{ request.form['message'] }}"></textarea>
-				</div>
-				<div class="form-control">
-					<input type="submit" value="Send" id="submit-btn">
-				</div>
-			</form>
+	<div class="contact">
+		<div class="message-block">
+			<div class="text">You can send a message to me here:</div>
+			<div class="message-control">
+				<form method="post">
+					<div class="form-control">
+						<input name="author" type="text" placeholder="Your Name" id="author" value="{{ request.form['author'] }}">
+					</div>
+					<div class="form-control">
+						<textarea name="message" placeholder="Write everthing you like..." id="message" value="{{ request.form['message'] }}"></textarea>
+					</div>
+					<div class="form-control">
+						<input type="submit" value="Send" id="submit-btn">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="line"></div>
+		<div class="links">
+			<span class="text">or find me at there:</span>
+			<ul class="icons">
+				<a href="naderebrahimi98@gmail.com"><i class="gmail"><img src="{{ url_for('static', filename=('icons/email.png'))}}" alt=""></i></a>
+				<a href="t.me/Nader76"><i class="telegram"><img src="{{ url_for('static', filename=('icons/whatsapp.png'))}}" alt=""></i></a>
+			</ul>
+			<ul class="icons">
+				<a href="www.github.com/Nader98"><i class="github"><img src="{{ url_for('static', filename=('icons/github.png'))}}" alt=""></i></a>
+				<a href="www.linkedin.com/in/nader-ebrahimi-ne"><i class="linkedin"><img src="{{ url_for('static', filename=('icons/linkedin.png'))}}" alt=""></i></a>
+			</ul>
+			<ul class="icons">
+				<a href="www.github.com/Nader98"><i class="youtube"><img src="{{ url_for('static', filename=('icons/youtube.png'))}}" alt=""></i></a>
+				<a href="t.me/Nader76"><i class="telegram"><img src="{{ url_for('static', filename=('icons/telegram.png'))}}" alt=""></i></a>
+			</ul>
 		</div>
 	</div>
 {% endblock content %}

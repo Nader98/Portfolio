@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+	<div class="about">
+		<div class="summary">
+			<p>I'm entry-level Backend Developer passionate about building efficient and scalabel web applications
+				using Flask. I've completed Harvard's CS50 courses in Python and SQL, and I love turning theory into
+				practice through real projects. My goal is to contribute to impactful software projects. learn from
+				professional teams, and grow as a backend engineer.
+			</p>
+		</div>
+		<div class="skills">
+			<span>I have experienced in these:</span>
+			<ul class="skills-li">
+				<li><img src="{{ url_for('static', filename='icons/python.png')}}" alt="Python logo"></li>
+				<li><img src="{{url_for('static', filename='icons/c++.png')}}" alt="C++ logo"></li>
+				<li><img src="{{url_for('static', filename='icons/postgre.png')}}" alt="Postgre logo"></li>
+				<li><img src="{{url_for('static', filename=('icons/js.png'))}}" alt="Javascript logo"></li>
+				<li><img src="{{url_for('static', filename=('icons/git.png'))}}" alt="Git"></li>
+			</ul>
+		</div>
+	</div>
+{% endblock content %}

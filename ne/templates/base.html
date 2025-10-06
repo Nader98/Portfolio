@@ -3,16 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-	<title>Nader Portfolio - {% block title %}{% endblock title %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>Nader Ebrahimi - {% block title %}{% endblock title %}</title>
 </head>
 <body>
-	<h1>Nader Ebrahimi</h1>
 	{% include("_navigation.html") %}
-	<section>
-		<header>
-			{% block header %}{% endblock header %}
-		</header>
+	<section class="content">
 		<main>
 			{% block content %}{% endblock content %}
 		</main>

@@ -1,9 +1,34 @@
 {% extends 'base.html' %}
 
-{% block header %}
-	<h2>{% block title %}Homepage{% endblock title %}</h2>
-{% endblock header %}
+{% block title %}Homepage{% endblock title %}
 
 {% block content %}
-	<p>This is homepage of my portfolio</p>
+	<div class="intro">
+		<div class="text">
+			<div class="greeting">Hi. I'm</div>
+			<div class="nader">Nader Ebrahimi</div>
+			<div class="profession">
+				<div class="line1">A Backend Developer passionate about building</div>
+				<div class="line2"> efficient and scalable web applications using Flask.</div>
+				<div class="links-1">
+					<span>You can get more info</span>
+					<a href="{{ url_for('pages.about') }}">about me</a>
+					<span>,</span>
+				</div>
+				<div class="links-2">
+					<span>or download my</span>
+					<a href="">Resume</a>
+					<span>.</span>
+				</div>
+			</div>
+			<div class="icons">
+				<a href="t.me/Nader76"><img src="{{ url_for('static', filename=('icons/telegram.png')) }}" alt="Telegram logo"></a>
+				<a href="www.github.com/Nader98"><img src="{{ url_for('static', filename=('icons/github.png')) }}" alt="GitHub logo"></a>
+				<a href="www.linkedin.com/in/nader-ebrahimi-ne"><img src="{{ url_for('static', filename=('icons/linkedin.png')) }}" alt="Linkedin logo"></a>
+			</div>
+		</div>
+		<div class="image">
+			<img src="{{ url_for('static', filename=('images/nader.png')) }}" alt="Nader Pic">
+		</div>
+	</div>
 {% endblock content %}
